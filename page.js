@@ -11,7 +11,7 @@ function sizeCanvas() {
 sizeCanvas();
 window.addEventListener('resize', sizeCanvas);
 
-const confettiColors = ['#ff7a2d', '#d93f2b', '#f5b547', '#fdf4e3', '#e85a1c', '#ffb94a'];
+const confettiColors = ['#3ea66a', '#27804f', '#c8e6a0', '#f2f5ee', '#8ec26a', '#1a6b42'];
 
 function burstConfetti(x, y, count = 120) {
   for (let i = 0; i < count; i++) {
@@ -73,7 +73,7 @@ document.getElementById('confettiBtn').addEventListener('click', (e) => {
 });
 
 // ============== BALLOONS ==============
-const balloonColors = ['#ff7a2d', '#d93f2b', '#f5b547', '#e85a1c'];
+const balloonColors = ['#3ea66a', '#27804f', '#c8e6a0', '#8ec26a'];
 const balloonContainer = document.getElementById('balloons');
 function spawnBalloon() {
   const b = document.createElement('div');
@@ -92,13 +92,13 @@ function spawnBalloon() {
   balloonContainer.appendChild(b);
   setTimeout(() => b.remove(), 25000);
 }
-for (let i = 0; i < 4; i++) setTimeout(spawnBalloon, i * 1800);
-setInterval(spawnBalloon, 3500);
+for (let i = 0; i < 10; i++) setTimeout(spawnBalloon, i * 600);
+setInterval(spawnBalloon, 1200);
 
 // Sprinkles on cake
 const tierBottom = document.getElementById('tierBottom');
 if (tierBottom) {
-  const sprinkleColors = ['#f5b547', '#fdf4e3', '#ff7a2d', '#d93f2b'];
+  const sprinkleColors = ['#c8e6a0', '#f2f5ee', '#3ea66a', '#8ec26a'];
   for (let i = 0; i < 25; i++) {
     const s = document.createElement('div');
     s.className = 'sprinkle';
@@ -221,6 +221,12 @@ const messages = [
     label: 'sobre a rift',
     title: 'Duo pra vida toda',
     body: 'Cara, nem sei quantas partidas a gente já jogou. Juntos e desavisados, carregando e sendo carregado. Você é o duo que não enjoa, que não flameia de verdade, que fala "mais uma" às 2 da manhã. Que a rift a gente continue rachando por muitos anos.'
+  },
+  {
+    seal: 'S',
+    label: 'sobre a saudade',
+    title: 'Tô com saudade, mano',
+    body: 'Esse ano você foi pra Portugal e o Brasil ficou meio vazio sem você por aqui. Tô com saudade de verdade. Saudade de marcar um LoL sem pensar no fuso, saudade de trocar ideia sem calcular horário, saudade de simplesmente saber que você tava por perto. Torço demais pra você nessa nova fase, que dê tudo certo aí. E quando você voltar, tô aqui. A amizade nossa atravessa oceano tranquilo.'
   },
   {
     seal: 'C',
